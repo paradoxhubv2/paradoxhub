@@ -3,7 +3,7 @@ repeat wait() until game:IsLoaded()
 getgenv().Fix = true
 
 getgenv().TeclasWS = {
-    ["tecla1"] = "M", -- speed +5
+    ["tecla1"] = "M", -- speed +10
     ["tecla2"] = "N", -- speed -5
     ["tecla3"] = "V" -- toggle  
 }
@@ -47,7 +47,7 @@ anunciar_atentado_terrorista("Welcome"..TeclasWS.tecla3.."")
 -- // conexión
 esvastica.KeyDown:Connect(function(el_impostor)
     if el_impostor:lower() == TeclasWS.tecla1:lower() then
-        velocidad_de_cum = velocidad_de_cum + 1
+        velocidad_de_cum = velocidad_de_cum + 10
         anunciar_atentado_terrorista(" (speed =   "..tostring(velocidad_de_cum)..")")
     elseif el_impostor:lower() == TeclasWS.tecla2:lower() then
         velocidad_de_cum = velocidad_de_cum - 1
