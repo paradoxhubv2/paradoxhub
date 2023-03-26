@@ -4,7 +4,7 @@ getgenv().Fix = true
 
 getgenv().TeclasWS = {
     ["tecla1"] = "M", -- speed +10
-    ["tecla2"] = "N", -- speed -5
+    ["tecla2"] = "N", -- speed -8
     ["tecla3"] = "V" -- toggle  
 }
 
@@ -50,7 +50,7 @@ esvastica.KeyDown:Connect(function(el_impostor)
         velocidad_de_cum = velocidad_de_cum + 10
         anunciar_atentado_terrorista(" (speed =   "..tostring(velocidad_de_cum)..")")
     elseif el_impostor:lower() == TeclasWS.tecla2:lower() then
-        velocidad_de_cum = velocidad_de_cum - 1
+        velocidad_de_cum = velocidad_de_cum - 8
         anunciar_atentado_terrorista(" (speed =  "..tostring(velocidad_de_cum)..")")
     elseif el_impostor:lower() == TeclasWS.tecla3:lower() then
         if es_pedofilo then
