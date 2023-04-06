@@ -7,10 +7,10 @@ local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.RightShift, 
 
 local themes = {
     Dark = {
-        TextColor = Color3.fromRGB(33, 66, 209),
+        TextColor = Color3.fromRGB(255, 0, 0),
        MainFrame = Color3.fromRGB(30, 30, 30),
         TabBackground = Color3.fromRGB(20, 20, 20),
-        Tab = Color3.fromRGB(0, 143, 255),
+        Tab = Color3.fromRGB(30, 30, 30),
         EnabledText = Color3.fromRGB(255, 255, 255),
         DisabledText = Color3.fromRGB(180, 180, 180),
         TabToggleEnabled = Color3.fromRGB(30, 30, 30),
