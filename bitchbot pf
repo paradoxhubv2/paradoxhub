@@ -1,0 +1,16 @@
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro2/main/ui2"))()
+local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
+NotifyLib.prompt('fixed bitchbot v2', 'loading phantom forces..', 2.5)
+NotifyLib.prompt('bitchbot v2 ', 'loaded in 2.5ms', 3)
+NotifyLib.prompt('!dontew#4483', 'rewritten by donte', 2.5)
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/paradoxhubv2/paradoxhub/main/venus", true))()
+
+local main = library:Load({Name = "Bitchbot v2   Private Version", Theme = "Dark", SizeX = 440, SizeY = 480, ColorOverrides = {}})
+local sky = main:Tab("Aimhax")
+local sky = sky:Section({Name = "SEAN 63165 just got trolled ggz", column = 1})
+
+
+local kys = main:Tab("Ragebot")
+local sky = sky:Section({Name = "adopt me unlock all wortking", column = 1})
