@@ -7,7 +7,6 @@ local HUD = Instance.new("ScreenGui")
 local TextLabel = Instance.new("TextLabel")
 
 --Properties:
-getgenv().fps = false
 
 HUD.Name = "HUD"
 HUD.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -24,7 +23,7 @@ TextLabel.TextSize = 18.000
 TextLabel.TextTransparency = 0.200
 
 -- Scripts:
-
+getgenv().fps = false
 local function LXNRJQH_fake_script() -- TextLabel.Calculate 
 	local script = Instance.new('LocalScript', TextLabel)
 
