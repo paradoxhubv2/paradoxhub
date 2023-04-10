@@ -7,7 +7,7 @@ local HUD = Instance.new("ScreenGui")
 local TextLabel = Instance.new("TextLabel")
 
 --Properties:
-getgenv().fps = true
+getgenv().fps = false
 
 HUD.Name = "HUD"
 HUD.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
