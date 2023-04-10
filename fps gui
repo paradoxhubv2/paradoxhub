@@ -1,0 +1,43 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local HUD = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+getgenv().fps = true
+
+HUD.Name = "HUD"
+HUD.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+TextLabel.Parent = HUD
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0902821198, -1, 0.899727046, 0)
+TextLabel.Size = UDim2.new(0.0549999997, 0, 0.100000001, 0)
+TextLabel.Font = Enum.Font.SourceSansItalic
+TextLabel.Text = "0 FPS"
+TextLabel.TextColor3 = Color3.fromRGB(0, 255, 17)
+TextLabel.TextSize = 18.000
+TextLabel.TextTransparency = 0.200
+
+-- Scripts:
+
+local function LXNRJQH_fake_script() -- TextLabel.Calculate 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local FpsCount = 0
+	
+	game:GetService("RunService").RenderStepped:connect(function()
+		FpsCount = FpsCount + 1
+	end)
+	
+	while wait(1) do
+		script.Parent.Text = FpsCount .. " FPS"
+		FpsCount = 0
+	end
+	
+end
+coroutine.wrap(LXNRJQH_fake_script)()
