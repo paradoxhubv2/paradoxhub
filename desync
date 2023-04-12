@@ -1,4 +1,8 @@
-local P1000ToggleKey = "q" -- Change that to whatever keybind: "t"
+local notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/notiflib/main/main"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro2/main/ui2"))()
+local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
+
+local P1000ToggleKey = "q" 
 
 
 
@@ -21,10 +25,10 @@ Bullshit.KeyDown:Connect(function(SayNoToOblivity)
         pcall(function()
             if PastedSources == false then
                 PastedSources = true
-                print("Enabled P1000")
+                NotifyLib.prompt('!dontew#4483', 'desync is enabled', 0.5)
             elseif PastedSources == true then
                 PastedSources = false
-                print("Disabled P1000")
+                NotifyLib.prompt('!dontew#4483', 'desync is disabled', 0.5)
             end
         end)
     end
