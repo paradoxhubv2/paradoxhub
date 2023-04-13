@@ -780,7 +780,7 @@ function library:Introduction()
     xsx.BackgroundTransparency = 1.000
     xsx.Size = UDim2.new(0, 80, 0, 21)
     xsx.Font = Enum.Font.Code
-    xsx.Text = "broght to you by senseware haxz"
+    xsx.Text = "senseware"
     xsx.TextColor3 = Color3.fromRGB(124, 124, 124)
     xsx.TextSize = 10.000
     xsx.TextTransparency = 1
@@ -792,7 +792,7 @@ function library:Introduction()
     text.Position = UDim2.new(0.912751675, 0, 0, 0)
     text.Size = UDim2.new(0, 26, 0, 21)
     text.Font = Enum.Font.Code
-    text.Text = "senseware"
+    text.Text = "sense"
     text.TextColor3 = Color3.fromRGB(124, 124, 124)
     text.TextSize = 10.000
     text.TextTransparency = 1
