@@ -288,7 +288,7 @@ Tab3:Button("Realistic Speed Glitch (V)",function(bool)
     end)
 end)
 
-Tab3:Button("FLY (X)",function(bool)
+Tab3:Button("FLY (F)",function(bool)
     loadstring(game:HttpGet("https://pastebin.com/raw/gpvXAixa"))()
 end)
 
