@@ -4,9 +4,9 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mappl
 local Window = Library:Create("tonkaware","Da hood")
 local Tab1 = Window:Tab("Aimlocks",true)
 
-Tab1:Label("Aimlock")
+Tab1:Label("aimlock")
 
-Tab1:Button("Nigger's Aimlock",function(bool)
+Tab1:Button("aimlock",function(bool)
     getgenv().AimPart = "HumanoidRootPart"
 	getgenv().AimlockKey = "q"
 	getgenv().AimRadius = 30
@@ -289,10 +289,10 @@ Tab3:Button("Realistic Speed Glitch (V)",function(bool)
 end)
 
 Tab3:Button("FLY (X)",function(bool)
-    loadstring(game:HttpGet("https://pastebin.com/raw/sUA9m6M6"))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/gpvXAixa"))()
 end)
 
-Tab3:Slider("Fov Camera",80,200,function(text)
+Tab3:Slider("Fov Camera",80,120,function(text)
     workspace.CurrentCamera.FieldOfView = (text)
 end)
 
