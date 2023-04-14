@@ -1,4 +1,17 @@
+--[[
 
+    Library Made for https://octohook.xyz/
+    Developed by liam#4567
+    Modified by tatar0071#0627
+
+    Ik this code is really shit in some places lol
+    will rewrite again i was just using some rly old stuff that i was lazy to rewrite
+    could've been a lot better and more optimized in some places and some things arent done as they should've been
+    got lazy when trying to make disable all roblox input when ui is open sooo that will be added later =)
+
+]]
+
+-- // Load
 
 local startupArgs = ({...})[1] or {}
 
@@ -65,7 +78,7 @@ local library = {
     open = false;
     opening = false;
     hasInit = false;
-    cheatname = startupArgs.cheatname or '$senseware$';
+    cheatname = startupArgs.cheatname or 'octohook';
     gamename = startupArgs.gamename or 'universal';
     fileext = startupArgs.fileext or '.txt';
 }
@@ -4566,7 +4579,7 @@ function library:init()
         if not IonHub_User then
             getgenv().IonHub_User = {
                 UID = 0, 
-                User = "private"
+                User = "admin"
             }
         end
         self.watermark = {
@@ -4741,11 +4754,11 @@ function library:CreateSettingsTab(menu)
 
     refreshConfigs()
 
-    mainSection:AddBind({text = 'open / close', flag = 'togglebind', nomouse = true, noindicator = true, bind = Enum.KeyCode.End, callback = function()
+    mainSection:AddBind({text = 'Open / Close', flag = 'togglebind', nomouse = true, noindicator = true, bind = Enum.KeyCode.End, callback = function()
         library:SetOpen(not library.open)
     end});
 
-    mainSection:AddButton({text = 'join discord', flag = 'joindiscord', confirm = true, callback = function()
+    mainSection:AddButton({text = 'Join Discord', flag = 'joindiscord', confirm = true, callback = function()
         local res = syn.request({
             Url = 'http://127.0.0.1:6463/rpc?v=1',
             Method = 'POST',
@@ -4764,19 +4777,19 @@ function library:CreateSettingsTab(menu)
         end
     end})
     
-    mainSection:AddButton({text = 'copy discord', flag = 'copydiscord', callback = function()
+    mainSection:AddButton({text = 'Copy Discord', flag = 'copydiscord', callback = function()
         setclipboard('discord.gg/pyvxjXY4FF')
     end})
 
-    mainSection:AddButton({text = 'rejoin server, confirm = true, callback = function()
+    mainSection:AddButton({text = 'Rejoin Server', confirm = true, callback = function()
         game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId);
     end})
 
-    mainSection:AddButton({text = 'rejoin game', confirm = true, callback = function()
+    mainSection:AddButton({text = 'Rejoin Game', confirm = true, callback = function()
         game:GetService("TeleportService"):Teleport(game.PlaceId);
     end})
 
-    mainSection:AddButton({text = 'unload', confirm = true, callback = function()
+    mainSection:AddButton({text = 'Unload', confirm = true, callback = function()
         library:Unload();
     end})
 
@@ -4784,20 +4797,20 @@ function library:CreateSettingsTab(menu)
     mainSection:AddToggle({text = 'Keybind Indicator', flag = 'keybind_indicator', callback = function(bool)
         library.keyIndicator:SetEnabled(bool);
     end})
-    mainSection:AddSlider({text = 'position x', flag = 'keybind_indicator_x', min = 0, max = 100, increment = .1, value = .5, callback = function()
+    mainSection:AddSlider({text = 'Position X', flag = 'keybind_indicator_x', min = 0, max = 100, increment = .1, value = .5, callback = function()
         library.keyIndicator:SetPosition(newUDim2(library.flags.keybind_indicator_x / 100, 0, library.flags.keybind_indicator_y / 100, 0));    
     end});
-    mainSection:AddSlider({text = 'position y', flag = 'keybind_indicator_y', min = 0, max = 100, increment = .1, value = 35, callback = function()
+    mainSection:AddSlider({text = 'Position Y', flag = 'keybind_indicator_y', min = 0, max = 100, increment = .1, value = 35, callback = function()
         library.keyIndicator:SetPosition(newUDim2(library.flags.keybind_indicator_x / 100, 0, library.flags.keybind_indicator_y / 100, 0));    
     end});
 
-    mainSection:AddSeparator({text = 'watermark'})
+    mainSection:AddSeparator({text = 'Watermark'})
     mainSection:AddToggle({text = 'Enabled', flag = 'watermark_enabled'});
     mainSection:AddList({text = 'Position', flag = 'watermark_pos', selected = 'Custom', values = {'Top', 'Top Left', 'Top Right', 'Bottom Left', 'Bottom Right', 'Custom'}, callback = function(val)
         library.watermark.lock = val;
     end})
-    mainSection:AddSlider({text = 'custom X', flag = 'watermark_x', suffix = '%', min = 0, max = 100, increment = .1});
-    mainSection:AddSlider({text = 'custom Y', flag = 'watermark_y', suffix = '%', min = 0, max = 100, increment = .1});
+    mainSection:AddSlider({text = 'Custom X', flag = 'watermark_x', suffix = '%', min = 0, max = 100, increment = .1});
+    mainSection:AddSlider({text = 'Custom Y', flag = 'watermark_y', suffix = '%', min = 0, max = 100, increment = .1});
 
     local themeStrings = {"Custom"};
     for _,v in next, library.themes do
