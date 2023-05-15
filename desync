@@ -25,10 +25,10 @@ Bullshit.KeyDown:Connect(function(SayNoToOblivity)
         pcall(function()
             if PastedSources == false then
                 PastedSources = true
-                NotifyLib.prompt('!dontew#4483', 'desync ON!!', 0.5)
+                NotifyLib.prompt('1hunnabandz', 'desync ON!!', 0.5)
             elseif PastedSources == true then
                 PastedSources = false
-                NotifyLib.prompt('!dontew#4483', 'desync OFF!', 0.5)
+                NotifyLib.prompt('1hunnabandz', 'desync OFF!', 0.5)
             end
         end)
     end
