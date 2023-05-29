@@ -1,0 +1,250 @@
+--[[
+
+prime cannot code!
+
+leaked by wenny#7777 >.<
+
+--]]
+
+_G.enable = true
+_G.color = Color3.fromRGB(0,0,0) --- COLOR FOR UR TRACER!
+_G.toggle_keybind = "i" -- enable tracer and disable
+_G.swith_nigga = 't' -- press t and u will see a noti on the user ur tracer is on 
+
+wait(2)
+game.StarterGui:SetCore("SendNotification", {
+    Title = '/silentaim leaked';
+    Text = 'Join .gg/kirb';
+    Duration = "2";
+})
+
+rs = game:GetService("RunService")
+local localPlayer = game.Players.LocalPlayer
+local mouse = localPlayer:GetMouse()
+local target;
+
+
+
+function getgun()
+ for i,v in pairs(target.Character:GetChildren()) do
+     if v and (v:FindFirstChild('Default') or v:FindFirstChild('Handle') )then
+         return v
+     end
+ end
+end
+
+function sendnotifi(message)
+
+
+ game.StarterGui:SetCore("SendNotification", {
+     Title =  ' join .gg/kirb';
+     Text = message;
+     Icon = 'rbxassetid://13114604545';
+     Duration = "1";
+ })
+
+ end
+
+
+function get_closet()
+ local a = math.huge
+ local b;
+
+
+
+ for i, v in pairs(game.Players:GetPlayers()) do
+     if v ~= localPlayer and v.Character and v.Character:FindFirstChild("Head") and  v.Character:FindFirstChild("HumanoidRootPart")  then
+         local c = game.Workspace.CurrentCamera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+         local d = (Vector2.new(mouse.X, mouse.Y) - Vector2.new(c.X, c.Y)).Magnitude
+
+         if a > d then
+             b = v
+             a = d
+         end
+     end
+ end
+
+ return b
+end
+
+
+mouse.KeyDown:Connect(function(z)
+ if z == _G.toggle_keybind then
+     if _G.enable == false then
+         _G.enable = true
+         sendnotifi("Aim-Viewer Enabled")
+     elseif _G.enable == true then
+         _G.enable = false 
+         sendnotifi("Aim-Viewer Disabled")
+     end
+ end
+end)
+
+mouse.KeyDown:Connect(function(z)
+ if z == _G.swith_nigga then
+     target = get_closet()
+     sendnotifi("targeting: "..tostring(target.Name))
+ end
+end)
+
+local a=Instance.new("Beam")a.Segments=1;a.Width0=0.2;a.Width1=0.2;a.Color=ColorSequence.new(_G.color)a.FaceCamera=true;local b=Instance.new("Attachment")local c=Instance.new("Attachment")a.Attachment0=b;a.Attachment1=c;a.Parent=workspace.Terrain;b.Parent=workspace.Terrain;c.Parent=workspace.Terrain
+
+task.spawn(function()
+ rs.RenderStepped:Connect(function()
+
+ local character = localPlayer.Character
+     if not character then
+     a.Enabled = false
+     return
+ end
+
+
+
+
+
+
+ if _G.enable  and getgun() and target.Character:FindFirstChild("BodyEffects") and target.Character:FindFirstChild("Head")  then
+     a.Enabled = true
+     b.Position =  target.Character:FindFirstChild("Head").Position
+     c.Position = target.Character.BodyEffects[_G.method].Value
+ else
+     a.Enabled = false
+ end
+
+ end)
+end)
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "primes anti GG/SILENTAIM LEAK!",
+   LoadingTitle = "leaked by wenny#7777",
+   LoadingSubtitle = ".gg/silentaim",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "silentaim", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "LEAKED",
+      Subtitle = "LEAKED",
+      Note = ".gg/silentaim got your script leaked",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"prime"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab = Window:CreateTab("anti lock", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("sky aa")
+
+--
+getgenv().Sky = false
+
+game:GetService("RunService").heartbeat:Connect(function()
+    if getgenv().Sky == true then 
+    local vel = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,825,0) 
+    game:GetService("RunService").RenderStepped:Wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = vel
+    end 
+end)
+
+--
+getgenv().desync = false
+
+game:GetService("RunService").heartbeat:Connect(function()
+    if getgenv().desync == true then 
+    local vel = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(65536,65536,65536) 
+    game:GetService("RunService").RenderStepped:Wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = vel
+    end 
+end)
+--
+getgenv().predbreak = false
+
+game:GetService("RunService").heartbeat:Connect(function()
+    if getgenv().predbreak == true then 
+    local vel = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0) 
+    game:GetService("RunService").RenderStepped:Wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = vel
+    end 
+end)
+--
+getgenv().legitaa = false
+
+game:GetService("RunService").heartbeat:Connect(function()
+    if getgenv().legitaa == true then 
+    local vel = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,-35,0) 
+    game:GetService("RunService").RenderStepped:Wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = vel
+    end 
+end)
+--
+
+local Toggle = Tab:CreateToggle({
+   Name = "sky aa",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(wennyleaked)
+ getgenv().Sky = wennyleaked
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "desync",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(hello)
+ getgenv().desync = hello
+   end,
+})
+
+
+
+local Section = Tab:CreateSection("prediction breaker")
+
+local Toggle = Tab:CreateToggle({
+   Name = "break there prediction.",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(nigga)
+ getgenv().predbreak = nigga
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "legit aa ppl cant really tell ur aaing easy to resolve tho",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(kirb)
+ getgenv().legitaa = kirb
+   end,
+})
+
+local Tab = Window:CreateTab("aimviewer", 4483362458) -- Title, Image
+
+local Tab = Window:CreateTab("credits", 4483362458) -- Title, Image
+
+local Paragraph = Tab:CreateParagraph({Title = "wenny#7777", Content = ".gg/silentaim leak"})
+
+
+
+
+
+
+
+
+
+
