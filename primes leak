@@ -37,7 +37,7 @@ function sendnotifi(message)
 
 
  game.StarterGui:SetCore("SendNotification", {
-     Title =  ' join .gg/kirb';
+     Title =  'wenny is a fat skid';
      Text = message;
      Icon = 'rbxassetid://13114604545';
      Duration = "1";
@@ -118,7 +118,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "primes anti GG/SILENTAIM LEAK!",
-   LoadingTitle = "leaked by wenny#7777",
+   LoadingTitle = "kirbsware got leaked lmao",
    LoadingSubtitle = ".gg/silentaim",
    ConfigurationSaving = {
       Enabled = true,
@@ -132,9 +132,9 @@ local Window = Rayfield:CreateWindow({
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "LEAKED",
+      Title = "",
       Subtitle = "LEAKED",
-      Note = ".gg/silentaim got your script leaked",
+      Note = "wenny is a big skid jit got leaked",
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
@@ -197,8 +197,8 @@ local Toggle = Tab:CreateToggle({
    Name = "sky aa",
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(wennyleaked)
- getgenv().Sky = wennyleaked
+   Callback = function(wennyaskid)
+ getgenv().Sky = wennyaskid
    end,
 })
 
@@ -228,16 +228,14 @@ local Toggle = Tab:CreateToggle({
    Name = "legit aa ppl cant really tell ur aaing easy to resolve tho",
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(kirb)
- getgenv().legitaa = kirb
+   Callback = function(wennyaskid)
+ getgenv().legitaa = wennyaskid
    end,
 })
 
 local Tab = Window:CreateTab("aimviewer", 4483362458) -- Title, Image
 
 local Tab = Window:CreateTab("credits", 4483362458) -- Title, Image
-
-local Paragraph = Tab:CreateParagraph({Title = "wenny#7777", Content = ".gg/silentaim leak"})
 
 
 
